@@ -2,11 +2,14 @@
 #include <iostream>
 #include <stdlib.h>
 #include <math.h> 
-
+#include <cstdlib> // for rand() and srand()
+#include <ctime> 
 using namespace std;
 
 int main(int argc, char *argv[]) {
     // Define file pointer and variables
+    srand(time(NULL));
+
     FILE *file;
     int BytesPerPixel;
     int width = 750;
@@ -38,11 +41,11 @@ int main(int argc, char *argv[]) {
     fread(Imagedata, sizeof(unsigned char), width * height * BytesPerPixel, file);
     fclose(file);
 
-    // Apply fixed thresholding
     for (int i = 0; i < height; ++i) {
         for (int j = 0; j < width; ++j) {
             for (int k = 0; k < BytesPerPixel; ++k) {
-                OutputImagedata[i][j][k] = (Imagedata[i][j][k] < Threshold) ? 0 : 255;
+                int randomThreshold = rand() % 256; // Random threshold for each pixel
+                OutputImagedata[i][j][k] = (Imagedata[i][j][k] > randomThreshold) ? 255 : 0;
             }
         }
     }
