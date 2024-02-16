@@ -38,12 +38,20 @@ int main(int argc, char *argv[]) {
     fread(Imagedata, sizeof(unsigned char), width * height * BytesPerPixel, file);
     fclose(file);
 
-    // Apply fixed thresholding
     for (int i = 0; i < height; ++i) {
         for (int j = 0; j < width; ++j) {
-            for (int k = 0; k < BytesPerPixel; ++k) {
-                int index = (i * width + j) * BytesPerPixel + k;
-                OutputImagedata[index] = (Imagedata[index] < Threshold) ? 0 : 255;
+            int index = (i * width + j) * BytesPerPixel;
+            int oldPixel = Imagedata[index];
+            int newPixel = (oldPixel < Threshold) ? 0 : 255;
+            OutputImagedata[index] = newPixel;
+        
+            int quant_error = oldPixel - newPixel;
+        
+            if (j + 1 < width) Imagedata[index + 1] += quant_error * 7 / 16;
+            if (i + 1 < height) {
+                if (j > 0) Imagedata[index + width - 1] += quant_error * 3 / 16;
+                Imagedata[index + width] += quant_error * 5 / 16;
+                if (j + 1 < width) Imagedata[index + width + 1] += quant_error * 1 / 16;
             }
         }
     }

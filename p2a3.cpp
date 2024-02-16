@@ -67,8 +67,8 @@ int main(int argc, char *argv[]) {
     }
 
     // Allocate image data array
-    unsigned char Imagedata[width][height][BytesPerPixel];
-    unsigned char OutputImagedata[width][height][BytesPerPixel];
+    unsigned char* Imagedata = new unsigned char[width * height * BytesPerPixel]; 
+    unsigned char* OutputImagedata = new unsigned char[width * height * BytesPerPixel];
 
     // Read image (filename specified by first argument) into image data matrix
     if (!(file = fopen(argv[1], "rb"))) {
@@ -88,8 +88,9 @@ int main(int argc, char *argv[]) {
             int bayerCol = j % N;
             // Dither based on the threshold matrix
             for (int k = 0; k < BytesPerPixel; ++k) {
+                int index = (i * width + j) * BytesPerPixel + k;
                 // If the pixel value is greater than the threshold, set it to 255, otherwise to 0
-                OutputImagedata[i][j][k] = (Imagedata[i][j][k] > T_8[bayerRow][bayerCol]) ? 255 : 0;
+                OutputImagedata[index] = (Imagedata[index] > T_8[bayerRow][bayerCol]) ? 255 : 0;
             }
         }
     }

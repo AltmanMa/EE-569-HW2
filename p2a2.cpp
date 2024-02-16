@@ -30,8 +30,8 @@ int main(int argc, char *argv[]) {
     }
 
     // Allocate image data array
-    unsigned char Imagedata[width][height][BytesPerPixel];
-    unsigned char OutputImagedata[width][height][BytesPerPixel];
+    unsigned char* Imagedata = new unsigned char[width * height * BytesPerPixel]; 
+    unsigned char* OutputImagedata = new unsigned char[width * height * BytesPerPixel];
 
     // Read image (filename specified by first argument) into image data matrix
     if (!(file = fopen(argv[1], "rb"))) {
@@ -44,8 +44,9 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < height; ++i) {
         for (int j = 0; j < width; ++j) {
             for (int k = 0; k < BytesPerPixel; ++k) {
+                int index = (i * width + j) * BytesPerPixel + k;
                 int randomThreshold = rand() % 256; // Random threshold for each pixel
-                OutputImagedata[i][j][k] = (Imagedata[i][j][k] > randomThreshold) ? 255 : 0;
+                OutputImagedata[index] = (Imagedata[index] > randomThreshold) ? 255 : 0;
             }
         }
     }

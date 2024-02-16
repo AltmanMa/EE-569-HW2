@@ -38,17 +38,31 @@ int main(int argc, char *argv[]) {
     fread(Imagedata, sizeof(unsigned char), width * height * BytesPerPixel, file);
     fclose(file);
 
-    // Apply fixed thresholding
     for (int i = 0; i < height; ++i) {
         for (int j = 0; j < width; ++j) {
-            for (int k = 0; k < BytesPerPixel; ++k) {
-                int index = (i * width + j) * BytesPerPixel + k;
-                OutputImagedata[index] = (Imagedata[index] < Threshold) ? 0 : 255;
+            int index = (i * width + j) * BytesPerPixel;
+            int oldPixel = Imagedata[index];
+            int newPixel = (oldPixel < Threshold) ? 0 : 255;
+            OutputImagedata[index] = newPixel;
+        
+            int quant_error = oldPixel - newPixel;
+
+        // Spread the quant_error according to the Stucki matrix
+            if (j + 1 < width) Imagedata[index + 1] += quant_error * 8 / 42;
+            if (j + 2 < width) Imagedata[index + 2] += quant_error * 4 / 42;
+        
+            for (int k = -2; k <= 2; ++k) {
+                if (i + 1 < height && j + k >= 0 && j + k < width) {
+                    int weight = (k == -2 || k == 2) ? 2 : (k == -1 || k == 1) ? 4 : 8;
+                    Imagedata[index + width + k] += quant_error * weight / 42;
+                }
+                if (i + 2 < height && j + k >= 0 && j + k < width) {
+                    int weight = (k == -2 || k == 2) ? 1 : (k == -1 || k == 1) ? 2 : 4;
+                    Imagedata[index + 2 * width + k] += quant_error * weight / 42;
+                }
             }
         }
     }
-
-
     // Write image data (filename specified by second argument) from image data matrix
     if (!(file = fopen(argv[2], "wb"))) {
         cout << "Cannot open file: " << argv[2] << endl;
