@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
     Mat edges;
 
     // use canny
-    Canny(img, edges, 100, 200); 
+    Canny(img, edges, 100, 220); 
 
     bool isSuccess = imwrite(outputFile, edges);
     if (!isSuccess) {
