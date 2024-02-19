@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <stdlib.h>
-#include <math.h> // For mathematical operations, such as sqrt and pow
+#include <math.h> 
 
 using namespace std;
 
@@ -14,16 +14,19 @@ void RGBtoGrayscale(unsigned char* RGB, unsigned char* Gray, int Width, int Heig
     }
 }
 
-// Function to apply Sobel filter and normalize the gradient
-void SobelFilter(unsigned char* Gray, unsigned char* Gradient, int Width, int Height) {
+// Function to apply Sobel filter and normalize the gradients
+void SobelFilter(unsigned char* Gray, unsigned char* GxNormalized, unsigned char* GyNormalized, int Width, int Height) {
     int Gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
     int Gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
-    int maxVal = 0;
+    int maxValX = 0, maxValY = 0;
+    int* GradientX = new int[Width * Height];
+    int* GradientY = new int[Width * Height];
 
+    // Apply kernels to the image and find maximum gradient values for normalization
     for(int x = 1; x < Height - 1; x++) {
         for(int y = 1; y < Width - 1; y++) {
-            float sumX = 0.0;
-            float sumY = 0.0;
+            int sumX = 0;
+            int sumY = 0;
 
             // Apply kernels to the image
             for(int i = -1; i <= 1; i++) {
@@ -33,40 +36,48 @@ void SobelFilter(unsigned char* Gray, unsigned char* Gradient, int Width, int He
                 }
             }
 
-            // Calculate the gradient magnitude
-            unsigned char magnitude = (unsigned char)sqrt(pow(sumX, 2.0) + pow(sumY, 2.0));
-            Gradient[x * Width + y] = magnitude;
+            // Store gradients
+            GradientX[x * Width + y] = sumX;
+            GradientY[x * Width + y] = sumY;
 
-            if(magnitude > maxVal) {
-                maxVal = magnitude;
+            // Update maximum values
+            if(abs(sumX) > maxValX) {
+                maxValX = abs(sumX);
+            }
+            if(abs(sumY) > maxValY) {
+                maxValY = abs(sumY);
             }
         }
     }
 
-    // Normalize the gradient to 0-255
+    // Normalize the gradient values to 0-255 and store in output arrays
     for(int i = 0; i < Width * Height; i++) {
-        Gradient[i] = (Gradient[i] * 255) / maxVal;
+        GxNormalized[i] = (unsigned char)(255.0 * abs(GradientX[i]) / maxValX);
+        GyNormalized[i] = (unsigned char)(255.0 * abs(GradientY[i]) / maxValY);
     }
+
+    // Free allocated memory for temporary gradient arrays
+    delete[] GradientX;
+    delete[] GradientY;
 }
 
+
 int main(int argc, char *argv[]) {
-    // Define file pointer and variables
     FILE *file;
     int Width = 481, Height = 321;
 
-    // Check for proper syntax
-    if (argc < 3) {
+    if (argc < 4) {
         cout << "Syntax Error - Incorrect Parameter Usage:" << endl;
-        cout << "program_name input_image.raw output_image.raw" << endl;
+        cout << "program_name input_image.raw output_image_x_gradient.raw output_image_y_gradient.raw" << endl;
         return 0;
     }
 
-    // Allocate memory for image data array dynamically
-    unsigned char* Imagedata = new unsigned char[Width * Height * 3]; // For RGB
-    unsigned char* GrayData = new unsigned char[Width * Height]; // For grayscale
-    unsigned char* Gradient = new unsigned char[Width * Height]; // For gradient
+    unsigned char* Imagedata = new unsigned char[Width * Height * 3];
+    unsigned char* GrayData = new unsigned char[Width * Height];
+    unsigned char* GradientX = new unsigned char[Width * Height];
+    unsigned char* GradientY = new unsigned char[Width * Height];
 
-    // Read image (filename specified by first argument) into image data matrix
+    // Read image
     if (!(file = fopen(argv[1], "rb"))) {
         cout << "Cannot open file: " << argv[1] << endl;
         exit(1);
@@ -77,21 +88,30 @@ int main(int argc, char *argv[]) {
     // Convert RGB to Grayscale
     RGBtoGrayscale(Imagedata, GrayData, Width, Height);
 
-    // Apply Sobel Filter
-    SobelFilter(GrayData, Gradient, Width, Height);
+    // Apply Sobel Filter and Generate Gradient Images
+    SobelFilter(GrayData, GradientX, GradientY, Width, Height);
 
-    // Write Gradient image data (filename specified by second argument) from image data matrix
+    // Write Gradient X image data
     if (!(file = fopen(argv[2], "wb"))) {
         cout << "Cannot open file: " << argv[2] << endl;
         exit(1);
     }
-    fwrite(Gradient, sizeof(unsigned char), Width * Height, file);
+    fwrite(GradientX, sizeof(unsigned char), Width * Height, file);
+    fclose(file);
+
+    // Write Gradient Y image data
+    if (!(file = fopen(argv[3], "wb"))) {
+        cout << "Cannot open file: " << argv[3] << endl;
+        exit(1);
+    }
+    fwrite(GradientY, sizeof(unsigned char), Width * Height, file);
     fclose(file);
 
     // Free allocated memory
     delete[] Imagedata;
     delete[] GrayData;
-    delete[] Gradient;
+    delete[] GradientX;
+    delete[] GradientY;
 
     return 0;
 }

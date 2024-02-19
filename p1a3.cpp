@@ -13,6 +13,36 @@ void RGBtoGrayscale(unsigned char* RGB, unsigned char* Gray, int Width, int Heig
         Gray[i] = (unsigned char)(0.2989 * RGB[j] + 0.5870 * RGB[j + 1] + 0.1140 * RGB[j + 2]);
     }
 }
+// funtion to apply thereshold
+unsigned char findThreshold(unsigned char* Gradient, int Width, int Height, float percentile) {
+    int histogram[256] = {0};
+    int totalPixels = Width * Height;
+
+    for (int i = 0; i < totalPixels; i++) {
+        histogram[Gradient[i]]++;
+    }
+
+    int cumHistogram[256] = {0};
+    cumHistogram[0] = histogram[0];
+    for (int i = 1; i < 256; i++) {
+        cumHistogram[i] = cumHistogram[i - 1] + histogram[i];
+    }
+
+    int target = int(percentile * totalPixels);
+    for (int i = 0; i < 256; i++) {
+        if (cumHistogram[i] >= target) {
+            return i; 
+        }
+    }
+
+    return 255; 
+}
+void Thresholding(unsigned char* Gradient, unsigned char* EdgeMap, int Width, int Height, unsigned char Threshold) {
+    int Pixels = Width * Height;
+    for (int i = 0; i < Pixels; i++) {
+        EdgeMap[i] = (Gradient[i] >= Threshold) ? 255 : 0;
+    }
+}
 
 // Function to apply Sobel filter and normalize the gradient
 void SobelFilter(unsigned char* Gray, unsigned char* Gradient, int Width, int Height) {
@@ -79,19 +109,27 @@ int main(int argc, char *argv[]) {
 
     // Apply Sobel Filter
     SobelFilter(GrayData, Gradient, Width, Height);
+    
+    unsigned char* EdgeMap = new unsigned char[Width * Height];
+
+    float percentile = 0.93; // percentage threshold
+    unsigned char Threshold = findThreshold(Gradient, Width, Height, percentile);
+
+// apply the threshold
+    Thresholding(Gradient, EdgeMap, Width, Height, Threshold);
 
     // Write Gradient image data (filename specified by second argument) from image data matrix
     if (!(file = fopen(argv[2], "wb"))) {
         cout << "Cannot open file: " << argv[2] << endl;
         exit(1);
     }
-    fwrite(Gradient, sizeof(unsigned char), Width * Height, file);
+    fwrite(EdgeMap, sizeof(unsigned char), Width * Height, file);
     fclose(file);
 
     // Free allocated memory
     delete[] Imagedata;
     delete[] GrayData;
     delete[] Gradient;
-
+    delete[] EdgeMap;
     return 0;
 }
