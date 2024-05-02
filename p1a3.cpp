@@ -112,7 +112,7 @@ int main(int argc, char *argv[]) {
     
     unsigned char* EdgeMap = new unsigned char[Width * Height];
 
-    float percentile = 0.93; // percentage threshold
+    float percentile = 0.90; // percentage threshold
     unsigned char Threshold = findThreshold(Gradient, Width, Height, percentile);
 
 // apply the threshold

@@ -47,6 +47,7 @@ int main(int argc, char *argv[]) {
     int Threshold = 128;  //set the Threshold
     
     std::vector<std::vector<int>> I_2 = { {1, 2}, {3, 0} };
+    std::vector<std::vector<int>> T_2 = createThresholdMatrix(I_2);
 
     std::vector<std::vector<int>> I_8 = expandBayerMatrix(expandBayerMatrix(I_2));
     std::vector<std::vector<int>> I_32 = expandBayerMatrix(expandBayerMatrix(I_8));
@@ -78,7 +79,7 @@ int main(int argc, char *argv[]) {
     fread(Imagedata, sizeof(unsigned char), width * height * BytesPerPixel, file);
     fclose(file);
 
-    int N = T_8.size(); // Assuming we are using T_8, the 8x8 threshold matrix
+    int N = T_2.size(); // Assuming we are using T_8, the 8x8 threshold matrix
 
     // Loop over each pixel and apply the Bayer dithering algorithm
     for (int i = 0; i < height; ++i) {
@@ -90,7 +91,7 @@ int main(int argc, char *argv[]) {
             for (int k = 0; k < BytesPerPixel; ++k) {
                 int index = (i * width + j) * BytesPerPixel + k;
                 // If the pixel value is greater than the threshold, set it to 255, otherwise to 0
-                OutputImagedata[index] = (Imagedata[index] > T_8[bayerRow][bayerCol]) ? 255 : 0;
+                OutputImagedata[index] = (Imagedata[index] > T_2[bayerRow][bayerCol]) ? 255 : 0;
             }
         }
     }

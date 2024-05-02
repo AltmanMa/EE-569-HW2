@@ -1,0 +1,438 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.26)  10 MAR 2024 22:29
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**document.tex
+(./document.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-01-24>
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+)
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(d:/Latex/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(d:/Latex/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count193
+\Gm@cntv=\count194
+\c@Gm@tempcnt=\count195
+\Gm@bindingoffset=\dimen143
+\Gm@wd@mp=\dimen144
+\Gm@odd@mp=\dimen145
+\Gm@even@mp=\dimen146
+\Gm@layoutwidth=\dimen147
+\Gm@layoutheight=\dimen148
+\Gm@layouthoffset=\dimen149
+\Gm@layoutvoffset=\dimen150
+\Gm@dimlist=\toks17
+)
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen151
+))
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen152
+)
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count196
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count197
+\leftroot@=\count198
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count199
+\DOTSCASE@=\count266
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen153
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count267
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count268
+\dotsspace@=\muskip16
+\c@parentequation=\count269
+\dspbrk@lvl=\count270
+\tag@help=\toks19
+\row@=\count271
+\column@=\count272
+\maxfields@=\count273
+\andhelp@=\toks20
+\eqnshift@=\dimen154
+\alignsep@=\dimen155
+\tagshift@=\dimen156
+\tagwidth@=\dimen157
+\totwidth@=\dimen158
+\lineht@=\dimen159
+\@envbody=\toks21
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip53
+\f@nch@O@elh=\skip54
+\f@nch@O@erh=\skip55
+\f@nch@O@olh=\skip56
+\f@nch@O@orh=\skip57
+\f@nch@O@elf=\skip58
+\f@nch@O@erf=\skip59
+\f@nch@O@olf=\skip60
+\f@nch@O@orf=\skip61
+)
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count274
+\float@exts=\toks23
+\float@box=\box53
+\@float@everytoks=\toks24
+\@floatcapt=\box54
+)
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen160
+\captionmargin=\dimen161
+\caption@leftmargin=\dimen162
+\caption@rightmargin=\dimen163
+\caption@width=\dimen164
+\caption@indent=\dimen165
+\caption@parindent=\dimen166
+\caption@hangindent=\dimen167
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count275
+\c@continuedfloat=\count276
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count277
+\c@subtable=\count278
+)
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count279
+\l__pdf_internal_box=\box55
+)
+(./document.aux)
+\openout1 = `document.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+
+(d:/Latex/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count280
+\scratchdimen=\dimen168
+\scratchbox=\box56
+\nofMPsegments=\count281
+\nofMParguments=\count282
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count283
+\MPscratchDim=\dimen169
+\MPnumerator=\count284
+\makeMPintoPDFobject=\count285
+\everyMPtoPDFconversion=\toks26
+) (d:/Latex/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(d:/Latex/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=15.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+<TigerX.jpg, id=1, 482.80376pt x 322.20375pt>
+File: TigerX.jpg Graphic file (type jpg)
+<use TigerX.jpg>
+Package pdftex.def Info: TigerX.jpg  used on input line 32.
+(pdftex.def)             Requested size: 211.38832pt x 141.07195pt.
+<TigerY.jpg, id=2, 482.80376pt x 322.20375pt>
+File: TigerY.jpg Graphic file (type jpg)
+<use TigerY.jpg>
+Package pdftex.def Info: TigerY.jpg  used on input line 38.
+(pdftex.def)             Requested size: 211.38832pt x 141.07195pt.
+<PigX.jpg, id=3, 482.80376pt x 322.20375pt>
+File: PigX.jpg Graphic file (type jpg)
+<use PigX.jpg>
+Package pdftex.def Info: PigX.jpg  used on input line 45.
+(pdftex.def)             Requested size: 211.38832pt x 141.07195pt.
+<PigY.jpg, id=4, 482.80376pt x 322.20375pt>
+File: PigY.jpg Graphic file (type jpg)
+<use PigY.jpg>
+Package pdftex.def Info: PigY.jpg  used on input line 51.
+(pdftex.def)             Requested size: 211.38832pt x 141.07195pt.
+<Tiger1.jpg, id=5, 482.80376pt x 322.20375pt>
+File: Tiger1.jpg Graphic file (type jpg)
+<use Tiger1.jpg>
+Package pdftex.def Info: Tiger1.jpg  used on input line 63.
+(pdftex.def)             Requested size: 211.38832pt x 141.07195pt.
+<Pig1.jpg, id=6, 482.80376pt x 322.20375pt>
+File: Pig1.jpg Graphic file (type jpg)
+<use Pig1.jpg>
+Package pdftex.def Info: Pig1.jpg  used on input line 69.
+(pdftex.def)             Requested size: 211.38832pt x 141.07195pt.
+[1{d:/Latex/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+ <./TigerX.jpg> <./TigerY.jpg> <./PigX.jpg> <./PigY.jpg>]
+<Tiger90.jpg, id=15, 482.80376pt x 322.20375pt>
+File: Tiger90.jpg Graphic file (type jpg)
+<use Tiger90.jpg>
+Package pdftex.def Info: Tiger90.jpg  used on input line 81.
+(pdftex.def)             Requested size: 211.38832pt x 141.07195pt.
+<Pig80.jpg, id=16, 482.80376pt x 322.20375pt>
+File: Pig80.jpg Graphic file (type jpg)
+<use Pig80.jpg>
+Package pdftex.def Info: Pig80.jpg  used on input line 88.
+(pdftex.def)             Requested size: 211.38832pt x 141.07195pt.
+<TigerCanny120_220.jpg, id=17, 482.80376pt x 322.20375pt>
+File: TigerCanny120_220.jpg Graphic file (type jpg)
+<use TigerCanny120_220.jpg>
+Package pdftex.def Info: TigerCanny120_220.jpg  used on input line 111.
+(pdftex.def)             Requested size: 150.32504pt x 100.31969pt.
+<TigerCanny200_400.jpg, id=18, 482.80376pt x 322.20375pt>
+File: TigerCanny200_400.jpg Graphic file (type jpg)
+<use TigerCanny200_400.jpg>
+Package pdftex.def Info: TigerCanny200_400.jpg  used on input line 118.
+(pdftex.def)             Requested size: 150.32504pt x 100.31969pt.
+<TigerCanny180_600.jpg, id=19, 482.80376pt x 322.20375pt>
+File: TigerCanny180_600.jpg Graphic file (type jpg)
+<use TigerCanny180_600.jpg>
+Package pdftex.def Info: TigerCanny180_600.jpg  used on input line 125.
+(pdftex.def)             Requested size: 150.32504pt x 100.31969pt.
+ [2 <./Tiger1.jpg> <./Pig1.jpg> <./Tiger90.jpg> <./Pig80.jpg>]
+<PigCanny150_300.jpg, id=23, 482.80376pt x 322.20375pt>
+File: PigCanny150_300.jpg Graphic file (type jpg)
+<use PigCanny150_300.jpg>
+Package pdftex.def Info: PigCanny150_300.jpg  used on input line 137.
+(pdftex.def)             Requested size: 150.32504pt x 100.31969pt.
+<PigCanny200_400.jpg, id=24, 482.80376pt x 322.20375pt>
+File: PigCanny200_400.jpg Graphic file (type jpg)
+<use PigCanny200_400.jpg>
+Package pdftex.def Info: PigCanny200_400.jpg  used on input line 144.
+(pdftex.def)             Requested size: 150.32504pt x 100.31969pt.
+<PigCanny180_600.jpg, id=25, 482.80376pt x 322.20375pt>
+File: PigCanny180_600.jpg Graphic file (type jpg)
+<use PigCanny180_600.jpg>
+Package pdftex.def Info: PigCanny180_600.jpg  used on input line 151.
+(pdftex.def)             Requested size: 150.32504pt x 100.31969pt.
+<Lighthouse_fixed.jpg, id=26, 752.8125pt x 501.875pt>
+File: Lighthouse_fixed.jpg Graphic file (type jpg)
+<use Lighthouse_fixed.jpg>
+Package pdftex.def Info: Lighthouse_fixed.jpg  used on input line 166.
+(pdftex.def)             Requested size: 169.1113pt x 112.74086pt.
+<Lighthouse_random.jpg, id=27, 752.8125pt x 501.875pt>
+File: Lighthouse_random.jpg Graphic file (type jpg)
+<use Lighthouse_random.jpg>
+Package pdftex.def Info: Lighthouse_random.jpg  used on input line 172.
+(pdftex.def)             Requested size: 169.1113pt x 112.74086pt.
+<LighthouseI_2.jpg, id=28, 752.8125pt x 501.875pt>
+File: LighthouseI_2.jpg Graphic file (type jpg)
+<use LighthouseI_2.jpg>
+Package pdftex.def Info: LighthouseI_2.jpg  used on input line 181.
+(pdftex.def)             Requested size: 150.32504pt x 100.2124pt.
+<LighthouseI_8.jpg, id=29, 752.8125pt x 501.875pt>
+File: LighthouseI_8.jpg Graphic file (type jpg)
+<use LighthouseI_8.jpg>
+Package pdftex.def Info: LighthouseI_8.jpg  used on input line 188.
+(pdftex.def)             Requested size: 150.32504pt x 100.2124pt.
+<LighthouseI_32.jpg, id=30, 752.8125pt x 501.875pt>
+File: LighthouseI_32.jpg Graphic file (type jpg)
+<use LighthouseI_32.jpg>
+Package pdftex.def Info: LighthouseI_32.jpg  used on input line 195.
+(pdftex.def)             Requested size: 150.32504pt x 100.2124pt.
+ [3 <./TigerCanny120_220.jpg> <./TigerCanny200_400.jpg> <./TigerCanny180_600.jp
+g> <./PigCanny150_300.jpg> <./PigCanny200_400.jpg> <./PigCanny180_600.jpg> <./L
+ighthouse_fixed.jpg> <./Lighthouse_random.jpg>]
+<Lighthouse_floyd.jpg, id=34, 752.8125pt x 501.875pt>
+File: Lighthouse_floyd.jpg Graphic file (type jpg)
+<use Lighthouse_floyd.jpg>
+Package pdftex.def Info: Lighthouse_floyd.jpg  used on input line 209.
+(pdftex.def)             Requested size: 187.89914pt x 125.26167pt.
+
+Underfull \hbox (badness 7944) in paragraph at lines 210--210
+[]\OT1/cmr/m/n/10.95 (a) |Pro-cessed Im-age with Floyd-
+ []
+
+<Lighthouse_JIN.jpg, id=35, 752.8125pt x 501.875pt>
+File: Lighthouse_JIN.jpg Graphic file (type jpg)
+<use Lighthouse_JIN.jpg>
+Package pdftex.def Info: Lighthouse_JIN.jpg  used on input line 216.
+(pdftex.def)             Requested size: 187.89914pt x 125.26167pt.
+<Lighthouse_Stucki.jpg, id=36, 752.8125pt x 501.875pt>
+File: Lighthouse_Stucki.jpg Graphic file (type jpg)
+<use Lighthouse_Stucki.jpg>
+Package pdftex.def Info: Lighthouse_Stucki.jpg  used on input line 223.
+(pdftex.def)             Requested size: 187.89914pt x 125.26167pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+
+ []
+
+[4 <./LighthouseI_2.jpg> <./LighthouseI_8.jpg> <./LighthouseI_32.jpg> <./Lighth
+ouse_floyd.jpg> <./Lighthouse_JIN.jpg> <./Lighthouse_Stucki.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+<Bird_seperable.jpg, id=43, 501.875pt x 376.40625pt>
+File: Bird_seperable.jpg Graphic file (type jpg)
+<use Bird_seperable.jpg>
+Package pdftex.def Info: Bird_seperable.jpg  used on input line 240.
+(pdftex.def)             Requested size: 328.82707pt x 246.63116pt.
+[5 <./Bird_seperable.jpg>]
+<BirdMBVQ.jpg, id=47, 501.875pt x 376.40625pt>
+File: BirdMBVQ.jpg Graphic file (type jpg)
+<use BirdMBVQ.jpg>
+Package pdftex.def Info: BirdMBVQ.jpg  used on input line 253.
+(pdftex.def)             Requested size: 328.82707pt x 246.63116pt.
+ [6 <./BirdMBVQ.jpg>] (./document.aux) ) 
+Here is how much of TeX's memory you used:
+ 4504 strings out of 476065
+ 76238 string characters out of 5792026
+ 1858299 words of memory out of 5000000
+ 24882 multiletter control sequences out of 15000+600000
+ 518048 words of font info for 52 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 67i,12n,77p,746b,544s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/Latex/texlive/2022/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb><d:/Latex/texlive/2022/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb><d:/Latex/texlive/2022/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi12.pfb><d:/Latex/texlive/2022/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb><d:/Latex/texlive/2022/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb><d:/Latex/texlive/2022/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr8.pfb>
+Output written on document.pdf (6 pages, 3149544 bytes).
+PDF statistics:
+ 77 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+
